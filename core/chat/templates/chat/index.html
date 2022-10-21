@@ -10,9 +10,10 @@
    <h1>your chat rooms</h1> 
    <hr>
 
+
    {% for people in peoples %}
         {% comment %} for make url from users {% endcomment %}
-       <a href="{% url 'chat_page' people.id %}"> <h2>{{ people.name }}</h2></a>
+       <a href="{% url 'chat_page' people.id %}"> <h2>@{{ people }}</h2></a>
    {% endfor %}
 </body>
 </html>

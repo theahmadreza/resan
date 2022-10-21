@@ -1,7 +1,11 @@
 from django.shortcuts import render
+from .models import *
 
+
+from django.contrib.auth.models import User
 # Create your views here.
 
+"""
 peoples = [
     {
         'id': 1,
@@ -16,9 +20,11 @@ peoples = [
         'name': '@amin'
     },
 ]
+"""
 
 
 def index(request):
+    peoples = User.objects.all()
     context = {
         "peoples": peoples
     }
@@ -29,7 +35,10 @@ def index(request):
    
 # for send users id use 'pk'
 def chat_page(request, pk):
+    peoples = Users.objects.all()
     people = None
+
+    print(peoples)
 
     """
     for make users chat available on chat page 
@@ -43,7 +52,8 @@ def chat_page(request, pk):
             people = i
     
     context = {
-        "people": people
+        "people": people,
+        # "users": Users.objects.all() #temporary
     }
     
     

@@ -31,6 +31,13 @@ def index(request):
 def chat_page(request, pk):
     people = None
 
+    """
+    for make users chat available on chat page 
+        - create loop for peoples dict (temporary)
+        - check if people id's equal by primary key\
+            then people variable equel by people who\
+            theres id equal by primary key
+    """
     for i in peoples:
         if i['id'] == int(pk):
             people = i

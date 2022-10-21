@@ -13,7 +13,8 @@
 
    {% for people in peoples %}
         {% comment %} for make url from users {% endcomment %}
-       <a href="{% url 'chat_page' people.id %}"> <h2>@{{ people }}</h2></a>
+       <a href="{% url 'chat-page' people.id %}"> <h2>@{{ people.userName}}</h2></a>
+
    {% endfor %}
 </body>
 </html>

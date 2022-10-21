@@ -3,7 +3,6 @@ from django.db import models
 
 # Create your models here.
 class Users(models.Model):
-    id = models.UUIDField(primary_key=True)
     user = models.ForeignKey(
         User, on_delete=models.CASCADE)
     userName = models.CharField(max_length=10)
@@ -11,7 +10,7 @@ class Users(models.Model):
     # email =
 
     def __str__(self):
-        return f"user: '{self.user}', username:'{self.userName}'"
+        return f"user: '{self.user}', username: '{self.userName}'"
 
 
 class Chat(models.Model):

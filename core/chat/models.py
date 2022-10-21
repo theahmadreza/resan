@@ -15,3 +15,4 @@ class Chat(models.Model):
     # for now(temporary) users can only send a image
     image = models.ImageField(upload_to="static/Users/send_images")
     messages = models.CharField(max_length="64")   
+    sendTime = models.DateTimeField(auto_now_add=True)

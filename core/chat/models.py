@@ -6,7 +6,7 @@ from django.db import models
 class Users(models.Model):
     user = models.ForeignKey(
         User, on_delete=models.CASCADE)
-    userName = models.CharField(max_length="10")
+    userName = models.CharField(max_length=10)
     UserPic = models.ImageField(upload_to="static/Users/pics")
     # email =
 
@@ -19,7 +19,7 @@ class Chat(models.Model):
     user = models.ForeignKey(
         User, on_delete=models.CASCADE) 
     image = models.ImageField(upload_to="static/Users/send_images")
-    message = models.CharField(max_length="64")   
+    message = models.CharField(max_length=64)   
     sendTime = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
